@@ -1,0 +1,33 @@
+\section{Teoremas de Gauss e Stokes}
+
+\renewcommand{\proofname}{Prova}
+\newtheorem{theorem}{Teorema}
+
+\begin{theorem}[Teorema de Gauss]
+Seja $V$ um subconjunto de $\mathbb{R}^n$ delimitado pela superfície orientável $S$. Se $\mathbf F$ é um campo vetorial continuamente diferenciável, então 
+\begin{equation}
+\oiint_S \mathbf{F} \cdot d\mathbf{S} = \iiint_V \nabla \cdot \mathbf{F} dV.
+\label{th: div}
+\end{equation}
+
+\end{theorem}
+
+\begin{proof}
+Particionamos a região em vários subconjuntos de volume $\Delta V_i$ delimitados cada um por uma superfície orientada $S_i$. Se dois elementos de volume compartilharem um mesmo elemento de superfície, suas contribuições serão opostas, devido a suas orientações. Assim, temos 
+\begin{align}
+\Phi_F(S) &= \sum_i \Phi_F(S_i) \notag \\
+\implies \oiint_{S} \mathbf{F} \cdot d\mathbf{S} &= \sum_i \oiint_{S_i} \mathbf{F} \cdot d\mathbf{S} \notag \\
+&= \sum_i \left( \frac{1}{\Delta V_i} \oiint_{S_i} \mathbf{F} \cdot d\mathbf{S} \right) \Delta V_i.
+\end{align}
+
+\noindent O argumento pode ser feito para $\Delta V_i$ arbitrariamente pequenos. No limite em que $\Delta V_i \to 0$, o termo entre parênteses se torna a divergência de $\mathbf{F}$ (pela definição em \ref{def: div}), e o somatôrio se torna uma integral sobre o volume $V$.
+\end{proof}
+
+\begin{theorem}[Teorema de Stokes]
+Seja $S$ uma superfície orientável delimitada pelo contorno $C$. Se $\mathbf{F}$ é um campo vetorial continuamente diferenciável, então
+\begin{equation}
+\oiint_S \nabla \times \mathbf{F} \cdot d\mathbf{S} = \oint_C \mathbf{F} \cdot d\mathbf{l}.
+\label{th: stokes}
+\end{equation}
+\end{theorem}
+A prova desse teorema não será mostrada aqui.

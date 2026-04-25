@@ -5,7 +5,7 @@ Se $F$ é um campo escalar, $\nabla F$ é o \textit{gradiente} de $F$. Considere
 \begin{equation*}
 F(\mathbf{x}+ d\mathbf{x}) - F(\mathbf{x}) \equiv dF = \partial_i F \, dx^i = dt(\mathbf u \cdot \nabla F),
 \end{equation*}
-\noindent portanto, $\nabla F$ aponta na direção de maior taxa de variação de $F$, e é normal à superfícies $F =$ constante. Na equação acima e no resto do trabalho, foi utilizada a notação de Eistein, onde índices repetidos em posições diferentes (em cima e em baixo) significam que há um somatório implícito sobre esse índice.
+\noindent portanto, $\nabla F$ aponta na direção de maior taxa de variação de $F$, e é normal à superfícies $F =$ constante. Na equação acima e no resto desse apêndice, foi utilizada a notação de Eistein, onde índices repetidos em posições diferentes (em cima e em baixo) significam que há um somatório implícito sobre esse índice.
 
 Se $\mathbf{F} = F^i \mathbf{e}_i$ é um campo vetorial, $\nabla \cdot \mathbf{F}$ é a \textit{divergência} de $\mathbf{F}
 $, e $\nabla \times \mathbf{F}$ é seu \textit{rotacional}. A divergência em um ponto $\mathbf{x}$ é definida como
@@ -30,12 +30,18 @@ O rotacional de um campo vetorial, diferentemente das outras aplicações do ope
 
 \noindent onde $\epsilon^{ijk}$ é o tensor de Levi-Civita.
 
-também definimos o \textit{laplaciano} de um campo escalar como sendo
+Também definimos o \textit{laplaciano} de um campo escalar como sendo
 \begin{equation}
     \nabla^2 F = \nabla \cdot \nabla F \;.
 \end{equation}
 
-\noindent Enquanto que para um campo vetorial, $\nabla^2 \mathbf F = \nabla^2 (F^i \mathbf{e}_i) = (\nabla^2 F^i) \mathbf{e}_i$. A seguinte identidade será útil:
+\noindent Enquanto que para um campo vetorial, $\nabla^2 \mathbf F = \nabla^2 (F^i \mathbf{e}_i) = (\nabla^2 F^i) \mathbf{e}_i$.
+
+As seguinte identidades serão úteis:
+\begin{equation}
+    \nabla \cdot \nabla \times \mathbf F = 0 \;;
+    \label{eq: div_rot}
+\end{equation}
 \begin{equation}
     \nabla \times \nabla \times \mathbf F = \nabla(\nabla \cdot \mathbf F) - \nabla^2 \mathbf F \;.
     \label{eq: nabla_identity}

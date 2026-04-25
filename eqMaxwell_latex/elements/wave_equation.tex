@@ -1,8 +1,8 @@
 \section{Ondas eletromagnéticas}
 
 A lei de Faraday nos diz que a variação no campo magnéticao gera um campo elétrico, enquanto a lei de Ampère-Maxwell nos diz que variação no campo elétrico gera um campo magnético.
-Portanto, um uma perturbação eletromagnética gera um pulso se propaga pelo espaço.
-Nessa sessão, será mostrado que essa propagação dos campos $\mathbf E$ e $\mathbf B$ obedecem uma equação de onda da forma
+Portanto, um uma perturbação eletromagnética gera um pulso que se propaga pelo espaço.
+Nessa sessão, será mostrado que essa propagação dos campos $\mathbf E$ e $\mathbf B$ obedece uma equação de onda da forma
 \begin{equation}
     v^2 \nabla^2 \mathbf F = \partial_t^2 \mathbf F \;,
     \label{eq: wave}
@@ -38,7 +38,12 @@ Concluímos que as perturbações se propagam na forma de ondas eletromagnética
 
 É possível mostrar que soluções das equações de Maxwell são da forma
 \begin{equation}
-    \mathbf B \nabla \times \mathbf A \;, \quad \mathbf E = -\nabla \phi - \partial_t \mathbf A \;,
+    \mathbf B = \nabla \times \mathbf A \;, \quad \mathbf E = -\nabla \phi - \partial_t \mathbf A \;,
     \label{eq: maxwell_solutions}
 \end{equation}
-\noindent onde $\phi$ e $\mathbf A$ são respectivamente o potencial escalar e o potencial vetor.
+\noindent onde $\phi$ e $\mathbf A$ são respectivamente o potencial escalar e o potencial vetor, que obedecem a relação
+\begin{equation}
+    \nabla \cdot \mathbf A + \epsilon_0\mu_0\partial_t \phi /c = 0 \;.
+    \label{eq: lorentz_condition}
+\end{equation}
+`

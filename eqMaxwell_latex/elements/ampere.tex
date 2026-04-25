@@ -1,0 +1,56 @@
+\section{Lei de Ampère-Maxwell}
+
+Essa lei relaciona a distribuição de corrente elétrica e a variação de campo elétrico com a o campo magnético.
+Em 1819, Hans Oersted descobriu que uma bússola posicionada paralelamente a um fio por onde passa corrente elétrica irá se orientar perpendicularmente a ele.
+Inspirado por esses resultados, Àmpere iniciou seus experimentos, onde determinou que a circulação do campo magnético sobre uma curva fechada $C$ é igual à corrente elétrica que atravessa uma superfície orientada $S$ delimitada por $C$.
+Note que há infinitas superfícies delimitadas pela mesma curva.
+Ampère afirma que o resultado é independente da superfície escolhida.
+
+Essa preposição pode ser representada matematicamente por
+\begin{equation}
+    \oint_C \mathbf B \cdot d\mathbf l = \mu_0 \iint_S \mathbf j \cdot d\mathbf S \;,
+    \label{eq: int_ampere}
+\end{equation}
+
+\noindent onde $\mathbf j$ é o vetor densidade de corrente. Utilizando o teorema \ref{th: stokes}, temos que $\oint_C \mathbf B \cdot d\mathbf l = \iint_S (\nabla \times \mathbf B) d\mathbf S$. Como a igualdade deve se manter para qualquer superfície $S$, a forma diferencial da eq.\eqref{eq: int_ampere} é
+\begin{equation}
+    \nabla \times \mathbf B = \mu_0 \mathbf j \,.
+    \label{eq: dif_ampere}
+\end{equation}
+
+Considere agora um circuito com um capacitor de placas paralelas.
+Seja $C$ uma curva fechada em torno do fio condutor.
+Se considerarmos uma superfície $S$ que passa pelo fio, podemos usar a eq.\eqref{eq: int_ampere} para determinar o campo $\mathbf B$.
+No entanto, podemos considerar uma superfície $S'$ com mesmo contorno de $S$, mas que passa pelo vão entre as placas, de modo que $\iint_{S'} \mathbf j \cdot d\mathbf S' = 0$, contradizendo o resultado anterior.
+
+A inconsistência também surge na forma diferencial:
+Tomando o divergente da eq.\eqref{eq: dif_ampere}, obtemos
+\begin{equation}
+    0 = \nabla \cdot (\nabla \times \mathbf B) = \nabla \cdot (\mu_0 \mathbf j) = \mu_0 \nabla \cdot \mathbf j = 0 \;.
+\end{equation}
+
+\noindent Mas, pela equação da continuidade, temos
+\begin{equation}
+    \nabla \cdot \mathbf j = - \partial_t \rho \;,
+    \label{eq: continuity}
+\end{equation}
+
+\noindent o que é uma contradição.
+
+Maxwell percebeu essas inconsistências e propôs uma alteração na lei de Ampère:
+Pela eq.\eqref{eq: poisson}, temos
+\begin{equation}
+    \partial_t \rho = \partial_t (\epsilon_0 \nabla \cdot \mathbf E ) = \nabla \cdot (\epsilon_0 \partial_t \mathbf E) \;,
+\end{equation}
+
+\noindent Então a equação eq.\eqref{eq: continuity} será satisfeita se a lei de Ampère for reformulada como
+\begin{equation}
+    \nabla \times \mathbf B = \mu_0 \mathbf j + \epsilon_0 \mu_0 \partial_t \mathbf E \;.
+    \label{eq: dif_amperemaxwell}
+\end{equation}
+
+\noindent Utilizando o teorema \ref{th: stokes}, temos também
+\begin{equation}
+    \oint_C \mathbf B \cdot d\mathbf l = \iint_S \left( \mu_0\mathbf j + \epsilon_0\mu_0\partial_t\mathbf E \right) \cdot d\mathbf S \;.
+    \label{eq: int_amperemaxwell}
+\end{equation}
